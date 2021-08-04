@@ -35,7 +35,7 @@ export function CardFooter(props) {
 export function Body(props) {
     return (
         <Text>
-        {props.children}
+        : {props.children}
         </Text>
 )}
 
@@ -50,13 +50,15 @@ export function Card(props) {
 
 const styles = StyleSheet.create({
     card: {
+        marginTop: 20,
         borderRadius: 5,
-        elevation: 3,
+        elevation: 5,
         backgroundColor:'#efefef',
-        shadowOffset: {width: 1, height: 2},
+        shadowOffset: {width: 3, height: 5},
         shadowOpacity: 0.8,
         shadowRadius: 8,
-
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     CardHeader: {
         height: 60,
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: 350,
-        height: 300,
+        height: 350,
         resizeMode: 'cover',
       },
 })
