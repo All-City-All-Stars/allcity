@@ -2,7 +2,6 @@ import React from 'react';
 import { Image, StyleSheet, View, Text, ScrollView, SafeAreaView } from 'react-native';
 import { Body, Card, CardFooter, CardHeader, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
-import Colors from '../data/Colors.js'
 
 export default function PostFeed(props) {
     return (
