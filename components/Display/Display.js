@@ -33,8 +33,8 @@ function Display(props) {
 }
 const styles = StyleSheet.create({
     background: {
-        flex: 1,
-        justifyContent: 'flex-end',
+        // flex: 1,
+        // justifyContent: 'flex-end',
         backgroundColor: 'darkturquoise'
     },
     postHeader: {
@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
     },
     postTitle: {
         fontSize: 17,
-        padding: 0,
+        // padding: 0,
         marginTop: 10,
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        // flexDirection: 'row',
+        // justifyContent: 'flex-start',
+        // alignItems: 'flex-start'
     },
     logo: {
         width: 300,
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
             height: 12,
         },
         shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-        elevation: 24,
+        shadowRadius: 5.00,
+        elevation: 5,
     },
     image: {
         width: 375,
