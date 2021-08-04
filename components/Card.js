@@ -50,7 +50,7 @@ export function Card(props) {
 
 const styles = StyleSheet.create({
     card: {
-        marginTop: 30,
+        marginTop: 20,
         borderRadius: 5,
         elevation: 5,
         backgroundColor:'#efefef',
