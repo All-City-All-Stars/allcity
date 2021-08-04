@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Nav from './navigation/TabNavigator';
+import CommentFeed from './screens/CommentFeed';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text></Text>
+      <StatusBar style="hidden" />
+      {/* <CommentFeed /> */}
+      <Nav />
     </View>
   );
 }
