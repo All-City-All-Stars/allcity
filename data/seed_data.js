@@ -1,5 +1,4 @@
-{
-    [
+const Data = [
         {
             "image_url": "https://i.imgur.com/yO2BrJn.jpg",
             "author": "Graff_Addict",
@@ -141,5 +140,6 @@
             "caption_body": "Atomik stays with the fire.  How the snow hasn't melted is beyond me.",
         }
     ]
-}
+
+export default Data
 
