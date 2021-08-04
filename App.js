@@ -3,11 +3,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Nav from './navigation/Navigator';
 import CommentFeed from './screens/CommentFeed';
+import PostFeed from './screens/PostFeed';
 
 export default function App() {
   return (
     <>
       <Nav />
+      <PostFeed />
     </>
   );
 }
