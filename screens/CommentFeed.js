@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, SafeAreaView, Image } from 'react-native';
+import { Text, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
 import Data from '../data/seed_data';
 
 export default function CommentFeed () {
