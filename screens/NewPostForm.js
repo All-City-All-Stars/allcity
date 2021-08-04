@@ -1,5 +1,14 @@
-import React from "react";
+import React from 'react';
+import { View, Text } from 'react-native';
 
-export default function NewPostForm() {
-  return <div></div>;
+function NewPostForm(props) {
+    return (
+        <View>
+            <Text>
+                This is the new post form
+            </Text>
+        </View>
+    );
 }
+
+export default NewPostForm;
