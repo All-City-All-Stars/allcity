@@ -39,7 +39,6 @@ export function Body(props) {
         </Text>
 )}
 
-
 export function Card(props) {
     return (
         <View style={[styles.card, randomColor]}>
