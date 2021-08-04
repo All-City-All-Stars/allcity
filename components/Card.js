@@ -124,7 +124,7 @@ const shadowColors = [
   "Peru",
   "Pink",
   "Plum",
-  "PowderBlue",c
+  "PowderBlue",
   "Purple",
   "RebeccaPurple",
   "Red",
