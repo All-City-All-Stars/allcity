@@ -50,20 +50,21 @@ export function Card(props) {
 
 const styles = StyleSheet.create({
     card: {
-        marginTop: 20,
+        marginTop: 30,
         borderRadius: 5,
         elevation: 5,
         backgroundColor:'#efefef',
-        shadowOffset: {width: 3, height: 5},
+        shadowOffset: {width: 8, height: 8},
         shadowOpacity: 0.8,
         shadowRadius: 8,
         justifyContent: 'center',
         alignItems: 'center',
+        marginHorizontal: 15,
     },
     CardHeader: {
-        height: 60,
+        height: 50,
         width: 350,
-        padding: 10,
+        padding: 15,
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
     },
