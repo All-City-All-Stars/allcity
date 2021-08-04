@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, ScrollView, SafeAreaView } from 'react-native';
+import { Image, StyleSheet, View, Text, ScrollView, SafeAreaView } from 'react-native';
 import { Body, Card, CardFooter, CardHeader, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
 
 
-function PostFeed(props) {
+export default function PostFeed(props) {
     return (
         <ScrollView>
             {
@@ -20,6 +20,10 @@ function PostFeed(props) {
                                     <User children={post.author} />
                                     <Body children={post.caption_body} />
                                 </CardFooter>
+                                <View style={styles.iconcontainer}>
+                                    <Image style={styles.icons} source={require('../assets/crown.png')} />
+                                    <Image style={styles.icons} source={require('../assets/roller.png')} />
+                                </View>
                             </Card>
                         </SafeAreaView>
                     )
@@ -29,4 +33,15 @@ function PostFeed(props) {
     );
 }
 
-export default PostFeed;
+const styles = StyleSheet.create({
+    icons: {
+        width: 50,
+        height: 50,
+        marginHorizontal: 120,
+        marginBottom: 20,
+
+    },
+    iconcontainer: {
+        flexDirection: 'row',
+    }
+})
