@@ -20,9 +20,8 @@ export function User(props){
 }
 
 export function CardImage(props){
-    const {url} = props
     return (
-        <Image style={styles.image} source={{uri: `${url}`}}/>
+        <Image style={styles.image} source={{uri: props.imgUrl}}/>
     )
 } 
 
