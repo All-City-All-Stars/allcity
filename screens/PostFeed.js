@@ -13,7 +13,9 @@ console.log('====================================');
 
 
 export default function PostFeed(props) {
+
     const navigation = useNavigation()
+
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView>
