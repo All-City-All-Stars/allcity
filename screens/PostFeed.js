@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, View, Text, ScrollView, SafeAreaView } from 'react-native';
-import { Body, Card, CardFooter, CardHeader, CardImage, User } from '../components/Card'
+import { Body, Card, CardFooter, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
 
 export default function PostFeed(props) {
@@ -11,9 +11,6 @@ export default function PostFeed(props) {
                     return (
                         <SafeAreaView key={idx}>
                             <Card>
-                                {/* <CardHeader>
-                                    <User children={post.author} />
-                                </CardHeader> */}
                                 <CardImage imgUrl={post.image_url} />
                                 <CardFooter>
                                     <User children={post.author} />
