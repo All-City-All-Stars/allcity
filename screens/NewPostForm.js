@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { View, Text, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import InputWithLabel from "../components/InputWithLabel";
 
 export default function NewPostForm() {
@@ -28,7 +33,7 @@ export default function NewPostForm() {
   }
 
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
         justifyContent: "center",
@@ -86,6 +91,6 @@ export default function NewPostForm() {
         value={caption_body}
         onChangeText={setCaptionBody}
       />
-    </View>
+    </ScrollView>
   );
 }
