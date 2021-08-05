@@ -16,6 +16,7 @@ export default function Nav () {
                     tabBarInactiveTintColor: 'cadetblue',
                     tabBarActiveBackgroundColor: 'gold',
                     tabBarInactiveBackgroundColor: 'gold', 
+                    headerShown: false,
                 }}
                 >
                 <Tab.Screen 
