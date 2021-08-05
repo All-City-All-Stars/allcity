@@ -22,8 +22,10 @@ export default function Nav () {
                         justifyContent: 'center',
                         alignItems: 'center',
                         borderTopWidth: 0,
-                    },
-                    
+                    },   
+                    tabBarIcon: ({ focused, color, size }) => {
+                        
+                    }               
                 }}
                 >
                 <Tab.Screen 
