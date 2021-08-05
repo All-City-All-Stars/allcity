@@ -1,12 +1,46 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Image, StyleSheet, View, Text, ScrollView, SafeAreaView } from 'react-native';
+import { Body, Card, CardFooter, CardHeader, CardImage, User } from '../components/Card'
+import Data from '../data/seed_data';
 
-function PostFeed(props) {
+export default function PostFeed(props) {
     return (
-        <View>
-            <Text>This is the post feed</Text>
-        </View>
+        <ScrollView>
+            {
+                Data.map((post, idx) => {
+                    return (
+                        <SafeAreaView key={idx}>
+                            <Card>
+                                {/* <CardHeader>
+                                    <User children={post.author} />
+                                </CardHeader> */}
+                                <CardImage imgUrl={post.image_url} />
+                                <CardFooter>
+                                    <User children={post.author} />
+                                    <Body children={post.caption_body} />
+                                    <Text>Location: {post.location}</Text>
+                                </CardFooter>
+                                <View style={styles.iconcontainer}>
+                                    <Image style={styles.icons} source={require('../assets/crown.png')} />
+                                    <Image style={styles.icons} source={require('../assets/roller.png')} />
+                                </View>
+                            </Card>
+                        </SafeAreaView>
+                    )
+                })
+            }
+        </ScrollView>
     );
 }
 
-export default PostFeed;
+const styles = StyleSheet.create({
+    icons: {
+        width: 40,
+        height: 40,
+        marginHorizontal: 120,
+        marginBottom: 20,
+    },
+    iconcontainer: {
+        flexDirection: 'row',
+    }
+})

@@ -22,13 +22,9 @@ const styles = StyleSheet.create({
         height: 80,
         marginTop: 20,
         shadowColor: "#FF1493",
-        shadowOffset: {
-            width: 0,
-            height: 8,
-        },
+        shadowOffset: { width: 0, height: 8},
         shadowOpacity: 0.85,
         shadowRadius: 5.00,
-        elevation: 24,
     },
 })
 
