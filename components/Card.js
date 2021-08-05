@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 5,
     },
     CardFooter: { 
-        height: 60,
+        height: 'auto',
         width: 350,
         padding: 10,
         borderBottomLeftRadius: 5,
@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
     image: {
         width: 350,
         height: 350,
-        resizeMode: 'cover',
+        resizeMode:'cover',
       },
 })
