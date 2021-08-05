@@ -12,8 +12,8 @@ console.log('====================================');
 }
 
 
-
 export default function PostFeed(props) {
+    const navigation = useNavigation()
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView>
@@ -30,7 +30,7 @@ export default function PostFeed(props) {
                                     </CardFooter>
                                         {
                                             post.comments.length ?
-                                            <TouchableOpacity >
+                                            <TouchableOpacity onPress={() => {navigation.navigate('Comments')}} >
                                                 <Text>View Comments...</Text>
                                             </TouchableOpacity>
                                             : null
