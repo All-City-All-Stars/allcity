@@ -1,28 +1,34 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, SafeAreaView, Image } from 'react-native';
+import { Text, StyleSheet, ScrollView, SafeAreaView, View } from 'react-native';
 import Data from '../data/seed_data';
+import { CommentCard } from '../components/Comment';
 
 export default function CommentFeed () {
+    // console.log(Data[0].comments);
     return (
-        <ScrollView>
-            {
-                Data.map((comment, idx) => {
-                    return (
-                        <SafeAreaView key={idx} >
-                            <Text style={styles.comment}>
-                                {comment.comments[idx]}
-                            </Text>
-                        </SafeAreaView>
-                    )
-                })
-            }
-        </ScrollView>
+        <SafeAreaView>
+            <ScrollView>  
+                {
+                    Data.map((post, idx) => {
+                    
+                        return (
+                            <>
+                                { 
+                                    post.comments.map((comment, i) => {
+                                        return (
+                                            <CommentCard>
+                                                <Text>
+                                                    {comment}
+                                                </Text>
+                                            </CommentCard>
+                                    )})
+                                }
+                            </>
+                        )
+                    })
+                }               
+            </ScrollView>
+        </SafeAreaView>
     )
 };
 
-const styles = StyleSheet.create({
-    comment: {
-        fontSize: 16,
-        flexDirection: 'column',
-    }
-})
