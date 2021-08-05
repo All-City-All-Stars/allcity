@@ -1,9 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Nav from './navigation/Navigator';
-import CommentFeed from './screens/CommentFeed';
-import PostFeed from './screens/PostFeed';
 import Header from './components/Header';
 
 export default function App() {
@@ -23,8 +21,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
-  }
 });

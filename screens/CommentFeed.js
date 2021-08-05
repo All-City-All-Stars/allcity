@@ -1,10 +1,8 @@
 import React from 'react';
-import { Text, StyleSheet, ScrollView, SafeAreaView, View } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, SafeAreaView, Image } from 'react-native';
 import Data from '../data/seed_data';
-import { CommentCard } from '../components/Comment';
 
 export default function CommentFeed () {
-    // console.log(Data[0].comments);
     return (
         <SafeAreaView>
             <ScrollView>  
@@ -32,3 +30,9 @@ export default function CommentFeed () {
     )
 };
 
+const styles = StyleSheet.create({
+    comment: {
+        fontSize: 16,
+        flexDirection: 'column',
+    }
+})
