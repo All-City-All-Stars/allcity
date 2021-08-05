@@ -3,22 +3,13 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PostFeed from '../screens/PostFeed';
 import NewPostForm from '../screens/NewPostForm';
-import CommentFeed from '../screens/CommentFeed';
 
 const Tab = createBottomTabNavigator();
 
 export default function Nav () {
     return (
         <NavigationContainer initialRouteName='Feed'>
-            <Tab.Navigator 
-                screenOptions={{
-                    tabBarActiveTintColor: 'darkviolet',
-                    tabBarInactiveTintColor: 'cadetblue',
-                    tabBarActiveBackgroundColor: 'gold',
-                    tabBarInactiveBackgroundColor: 'gold', 
-                    headerShown: false,
-                }}
-                >
+            <Tab.Navigator>
                 <Tab.Screen 
                     name='Feed' 
                     component={PostFeed} />
@@ -28,9 +19,6 @@ export default function Nav () {
                 {/* <Tab.Screen 
                 name='Profile' 
                 component={Profile} /> */}
-                <Tab.Screen
-                    name='Comments'
-                    component={CommentFeed} />
             </Tab.Navigator>
         </NavigationContainer>
     )
