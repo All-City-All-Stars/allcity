@@ -5,6 +5,7 @@ import Nav from './navigation/Navigator';
 import Header from './components/Header';
 
 export default function App() {
+
   return (
     <>
         <Header />

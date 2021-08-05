@@ -9,7 +9,23 @@ const Tab = createBottomTabNavigator();
 export default function Nav () {
     return (
         <NavigationContainer initialRouteName='Feed'>
-            <Tab.Navigator>
+            <Tab.Navigator 
+                screenOptions={{
+                    tabBarActiveTintColor: 'darkviolet',
+                    tabBarInactiveTintColor: 'cadetblue',
+                    tabBarActiveBackgroundColor: 'gold',
+                    tabBarInactiveBackgroundColor: 'gold', 
+                    headerShown: false,
+                    tabBarHeight: 300,
+                    tabBarStyle: {
+                        height: 115,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderTopWidth: 0,
+                    },
+                    
+                }}
+                >
                 <Tab.Screen 
                     name='Feed' 
                     component={PostFeed} />
