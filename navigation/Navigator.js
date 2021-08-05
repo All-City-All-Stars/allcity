@@ -1,14 +1,17 @@
 import React from 'react';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PostFeed from '../screens/PostFeed';
 import NewPostForm from '../screens/NewPostForm';
+import { StyleSheet } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 export default function Nav () {
     return (
-        <NavigationContainer initialRouteName='Feed'>
+        <NavigationContainer 
+            initialRouteName='Feed'
+            styles={styles.navContainer}>
             <Tab.Navigator 
                 screenOptions={{
                     tabBarActiveTintColor: 'darkviolet',
@@ -16,19 +19,21 @@ export default function Nav () {
                     tabBarActiveBackgroundColor: 'gold',
                     tabBarInactiveBackgroundColor: 'gold', 
                     headerShown: false,
-                    tabBarHeight: 300,
                     tabBarStyle: {
-                        height: 115,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        borderTopWidth: 0,
-                    },
-                    
+                        height: 80,
+                        position: 'absolute',
+                        paddingBottom: 0,
+                    },  
+                    tabBarHideOnKeyboard: 'true',
+                    // tabBarIcon: ({ focused, color, size }) => {
+
+                    // }               
                 }}
                 >
                 <Tab.Screen 
                     name='Feed' 
-                    component={PostFeed} />
+                    component={PostFeed}
+                    />
                 <Tab.Screen 
                     name='Add Post' 
                     component={NewPostForm} />
@@ -40,3 +45,9 @@ export default function Nav () {
     )
 };
 
+const styles = StyleSheet.create({
+    navContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+})

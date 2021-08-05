@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import {
   View,
   Text,
-  TextInput,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
 } from "react-native";
