@@ -5,7 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import PostFeed from "../screens/PostFeed";
 import CommentFeed from "../screens/CommentFeed";
 import NewPostForm from "../screens/NewPostForm";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Image } from "react-native";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -35,22 +35,37 @@ export default function Nav() {
           tabBarInactiveTintColor: "cadetblue",
           headerShown: false,
           tabBarStyle: {
-            height: 80,
+            height: 100,
             position: "absolute",
-            paddingBottom: 0,
             backgroundColor: "gold",
           },
           tabBarHideOnKeyboard: "true",
-          // tabBarIcon: ({ focused, color, size }) => {
-
-          // }
         }}
       >
         {/* <Tab.Screen name="Comment" component={Comment} /> */}
-        <Tab.Screen name="Feed" component={PostFeed} />
+        <Tab.Screen
+            name="Feed"
+            component={PostFeed}
+            options={{tabBarIcon: ({ focused, color, size }) => {
+            return (
+                <Image 
+                    style={{width:40, height: 40,}}
+                    source ={require('../assets/feed.png')}
+                />
+            )
+          }}}
+        />
         <Tab.Screen
           name="Add Post"
           component={NewPostForm}
+          options={{tabBarIcon: ({ focused, color, size }) => {
+            return (
+                <Image 
+                    style={{width:40, height: 40,}}
+                    source ={require('../assets/spraycan.png')}
+                />
+            )
+          }}}
         />
         {/* <Tab.Screen 
                 name='Profile' 
