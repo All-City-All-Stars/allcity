@@ -68,15 +68,16 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 5,
     },
     CardFooter: { 
-        height: 60,
+        height: 'auto',
         width: 350,
         padding: 10,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
     },
     image: {
-        width: 350,
-        height: 350,
-        resizeMode: 'cover',
+        width: 320,
+        height: 320,
+        marginTop:10,
+        resizeMode:'cover',
       },
 })
