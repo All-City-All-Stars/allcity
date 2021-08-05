@@ -32,7 +32,9 @@ export default function PostFeed(props) {
                                     </CardFooter>
                                         {
                                             post.comments.length ?
-                                            <TouchableOpacity onPress={() => {navigation.navigate('Comments')}} >
+                                            <TouchableOpacity 
+                                                key={idx} 
+                                                onPress={() => {navigation.navigate('Comments')}} >
                                                 <Text>View Comments...</Text>
                                             </TouchableOpacity>
                                             : null
