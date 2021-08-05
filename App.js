@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import Nav from "./navigation/Navigator";
 import Header from "./components/Header";
 import NewPostForm from "./screens/NewPostForm";
@@ -27,6 +27,8 @@ function Home() {
 
 export default function App() {
   return (
+    <>
+    <Header/>
     <NavigationContainer
       initialRouteName="Feed"
       styles={styles.navContainer}
@@ -37,9 +39,8 @@ export default function App() {
           tabBarInactiveTintColor: "cadetblue",
           headerShown: false,
           tabBarStyle: {
-            height: 80,
+            height: 100,
             position: "absolute",
-            paddingBottom: 0,
             backgroundColor: "gold",
           },
           tabBarHideOnKeyboard: "true",
@@ -49,16 +50,36 @@ export default function App() {
         }}
       >
         {/* <Tab.Screen name="Comment" component={Comment} /> */}
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{tabBarIcon: ({ focused, color, size }) => {
+            return (
+                <Image 
+                    style={{width:40, height: 40,}}
+                    source ={require('./assets/feed.png')}
+                />
+            )
+          }}}
+          />
         <Tab.Screen
           name="Add Post"
           component={NewPostForm}
+          options={{tabBarIcon: ({ focused, color, size }) => {
+            return (
+                <Image 
+                    style={{width:40, height: 40,}}
+                    source ={require('./assets/spraycan.png')}
+                />
+            )
+          }}}
         />
         {/* <Tab.Screen 
                 name='Profile' 
                 component={Profile} /> */}
       </Tab.Navigator>
     </NavigationContainer>
+    </>
   );
 }
 
