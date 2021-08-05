@@ -20,7 +20,6 @@ export default function Nav () {
                     tabBarStyle: {
                         height: 80,
                         position: 'absolute',
-                        paddingBottom: 0,
                         backgroundColor: 'gold',
                     },  
                     tabBarHideOnKeyboard: 'true',
