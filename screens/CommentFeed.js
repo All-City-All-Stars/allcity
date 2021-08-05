@@ -16,7 +16,7 @@ export default function CommentFeed () {
                                 { 
                                     post.comments.map((comment, i) => {
                                         return (
-                                            <CommentCard>
+                                            <CommentCard key={i}>
                                                 <Text>
                                                     {comment}
                                                 </Text>

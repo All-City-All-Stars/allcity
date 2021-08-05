@@ -17,6 +17,14 @@ export default function Nav () {
                     tabBarActiveBackgroundColor: 'gold',
                     tabBarInactiveBackgroundColor: 'gold', 
                     headerShown: false,
+                    tabBarHeight: 300,
+                    tabBarStyle: {
+                        height: 115,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderTopWidth: 0,
+                    },
+                    
                 }}
                 >
                 <Tab.Screen 
