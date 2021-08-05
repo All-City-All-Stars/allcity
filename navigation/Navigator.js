@@ -27,9 +27,9 @@ export default function Nav () {
                 {/* <Tab.Screen 
                 name='Profile' 
                 component={Profile} /> */}
-                {/* <Tab.screen
+                <Tab.Screen
                     name='Comments'
-                    component={CommentFeed} /> */}
+                    component={CommentFeed} />
             </Tab.Navigator>
         </NavigationContainer>
     )

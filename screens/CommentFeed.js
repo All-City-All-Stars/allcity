@@ -1,22 +1,31 @@
 import React from 'react';
-import { Text, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+import { Text, StyleSheet, ScrollView, SafeAreaView, View } from 'react-native';
 import Data from '../data/seed_data';
 
 export default function CommentFeed () {
+  
     return (
-        <ScrollView>
-            {
-                Data.map((comment, idx) => {
-                    return (
-                        <SafeAreaView key={idx} >
-                            <Text style={styles.comment}>
-                                {comment.comments[idx]}
-                            </Text>
-                        </SafeAreaView>
-                    )
-                })
-            }
-        </ScrollView>
+        <View>
+            <ScrollView>
+                
+                {
+                    Data.map((post, idx) => {
+                        return (
+                            <SafeAreaView key={idx} >
+                                { 
+                                    post.comments.map((comment, idx) => {
+                                        return (
+                                            <Text style={styles.comment}>
+                                                {comments.comment}
+                                            </Text>
+                                    )})
+                                }
+                            </SafeAreaView>
+                        )
+                    })
+                }               
+            </ScrollView>
+        </View>
     )
 };
 
