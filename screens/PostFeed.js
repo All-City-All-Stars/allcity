@@ -29,13 +29,14 @@ export default function PostFeed(props) {
                 }
             </ScrollView>
         </ImageBackground>
+
     );
 }
 
 const styles = StyleSheet.create({
     icons: {
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         marginHorizontal: 120,
         marginBottom: 20,
     },
