@@ -15,14 +15,13 @@ export default function Nav () {
             <Tab.Navigator 
                 screenOptions={{
                     tabBarActiveTintColor: 'darkviolet',
-                    tabBarInactiveTintColor: 'cadetblue',
-                    tabBarActiveBackgroundColor: 'gold',
-                    tabBarInactiveBackgroundColor: 'gold', 
+                    tabBarInactiveTintColor: 'cadetblue', 
                     headerShown: false,
                     tabBarStyle: {
                         height: 80,
                         position: 'absolute',
                         paddingBottom: 0,
+                        backgroundColor: 'gold',
                     },  
                     tabBarHideOnKeyboard: 'true',
                     // tabBarIcon: ({ focused, color, size }) => {
