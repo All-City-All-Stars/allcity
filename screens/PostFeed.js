@@ -24,25 +24,27 @@ export default function PostFeed(props) {
                         return (
                             <SafeAreaView key={idx}>
                                 <Card>
+                                    <Text style={styles.location}>📍{post.location}</Text>
                                     <CardImage imgUrl={post.image_url} />
                                     <CardFooter>
                                         <User children={post.author} />
                                         <Body children={post.caption_body} />
-                                        <Text>Location: {post.location}</Text>
                                     </CardFooter>
+                                       
+                                    <View style={styles.iconcontainer}>
+                                        <Image style={styles.icons} source={require('../assets/crown.png')} />
+
                                         {
                                             post.comments.length ?
                                             <TouchableOpacity 
                                                 key={idx} 
                                                 onPress={() => {navigation.navigate('Comments')}} >
-                                                <Text>View Comments...</Text>
+                                                  <Image style={styles.icons} source={require('../assets/roller.png')} />
                                             </TouchableOpacity>
                                             : null
                                             
                                         }
-                                    <View style={styles.iconcontainer}>
-                                        <Image style={styles.icons} source={require('../assets/crown.png')} />
-                                        <Image style={styles.icons} source={require('../assets/roller.png')} />
+                                      
                                     </View>
                                 </Card>
                             </SafeAreaView>
@@ -68,5 +70,9 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: 'center',
+    },
+    location: {
+        fontWeight: 'bold',
+        paddingTop: 10,
     }
 })
