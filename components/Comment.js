@@ -1,12 +1,28 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
-function Comment(props) {
-    return (
-        <View>
-            <Text>this is the comment component</Text>
-        </View>
-    );
+export function CommentCard(props) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.comment}>{props.children}</Text>
+    </View>
+  );
 }
 
-export default Comment;
+const styles = StyleSheet.create({
+  container: {
+    height: "auto",
+    backgroundColor: "#efefef",
+    borderBottomColor: "#222222",
+    borderBottomWidth: 1,
+    padding: 10,
+  },
+
+  comment: {
+    width: 350,
+    borderBottomColor: "#222222",
+    borderBottomWidth: 1,
+  },
+});
+
+
