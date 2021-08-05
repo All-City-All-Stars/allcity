@@ -11,14 +11,13 @@ export default function PostFeed(props) {
                     return (
                         <SafeAreaView key={idx}>
                             <Card>
-                                {/* <CardHeader>
+                                <CardHeader>
                                     <User children={post.author} />
-                                </CardHeader> */}
+                                </CardHeader>
                                 <CardImage imgUrl={post.image_url} />
                                 <CardFooter>
                                     <User children={post.author} />
                                     <Body children={post.caption_body} />
-                                    <Text>Location: {post.location}</Text>
                                 </CardFooter>
                                 <View style={styles.iconcontainer}>
                                     <Image style={styles.icons} source={require('../assets/crown.png')} />
@@ -35,8 +34,8 @@ export default function PostFeed(props) {
 
 const styles = StyleSheet.create({
     icons: {
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         marginHorizontal: 120,
         marginBottom: 20,
     },
