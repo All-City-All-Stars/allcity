@@ -4,16 +4,73 @@ import { StyleSheet, Text, View } from "react-native";
 import Nav from "./navigation/Navigator";
 import Header from "./components/Header";
 import NewPostForm from "./screens/NewPostForm";
+import PostFeed from "./screens/PostFeed";
+import CommentFeed from "./screens/CommentFeed";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function Home() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="PostFeed" component={PostFeed} />
+      <Stack.Screen
+        name="Comments"
+        component={CommentFeed}
+      />
+    </Stack.Navigator>
+  );
+}
 
 export default function App() {
   return (
-    <>
-      <Header />
-      {/* <NewPostForm /> */}
-      <Nav />
-    </>
+    <NavigationContainer
+      initialRouteName="Feed"
+      styles={styles.navContainer}
+    >
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: "darkviolet",
+          tabBarInactiveTintColor: "cadetblue",
+          headerShown: false,
+          tabBarStyle: {
+            height: 80,
+            position: "absolute",
+            paddingBottom: 0,
+            backgroundColor: "gold",
+          },
+          tabBarHideOnKeyboard: "true",
+          // tabBarIcon: ({ focused, color, size }) => {
+
+          // }
+        }}
+      >
+        {/* <Tab.Screen name="Comment" component={Comment} /> */}
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen
+          name="Add Post"
+          component={NewPostForm}
+        />
+        {/* <Tab.Screen 
+                name='Profile' 
+                component={Profile} /> */}
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
+
+// export default function App() {
+//   return (
+//     <>
+//       <Header />
+//       {/* <NewPostForm /> */}
+//       <Nav />
+//     </>
+//   );
+// }
 
 const styles = StyleSheet.create({
   container: {
