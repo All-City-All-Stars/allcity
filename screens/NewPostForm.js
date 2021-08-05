@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import {
   View,
   Text,
-  TextInput,
+  SafeAreaView,
   ScrollView,
+  StyleSheet,
 } from "react-native";
 import InputWithLabel from "../components/InputWithLabel";
 
@@ -92,7 +93,7 @@ export default function NewPostForm() {
 }
 
 const styles = StyleSheet.create({
-  style={
+  style: {
     flex: 1,
     justifyContent: "center",
     backgroundColor: "#ecf0f1",
