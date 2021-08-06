@@ -33,18 +33,11 @@ export default function PostFeed(props) {
                                        
                                     <View style={styles.iconcontainer}>
                                         <Image style={styles.icons} source={require('../assets/crown.png')} />
-
-                                        {
-                                            post.comments.length ?
-                                            <TouchableOpacity 
-                                                key={idx} 
-                                                onPress={() => {navigation.navigate('Comments')}} >
-                                                  <Image style={styles.icons} source={require('../assets/roller.png')} />
-                                            </TouchableOpacity>
-                                            : null
-                                            
-                                        }
-                                      
+                                        <TouchableOpacity 
+                                            key={idx} 
+                                            onPress={() => {navigation.navigate('Comments')}} >
+                                                <Image style={styles.icons} source={require('../assets/roller.png')} />
+                                        </TouchableOpacity>
                                     </View>
                                 </Card>
                             </SafeAreaView>
