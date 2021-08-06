@@ -4,11 +4,13 @@ import {
   StyleSheet,
   ScrollView,
   ImageBackground,
+  Button,
+  View,
 } from "react-native";
 import Data from "../data/seed_data";
 import { CommentCard } from "../components/Comment";
 
-export default function CommentFeed({ route }) {
+export default function CommentFeed({ route, navigation }) {
   const { postIdx } = route.params;
 
   return (
@@ -16,6 +18,14 @@ export default function CommentFeed({ route }) {
       source={require("../assets/bricks.png")}
       style={styles.image}
     >
+      <View style={styles.buttonView}>
+        <Button
+          onPress={() => navigation.goBack()}
+          title='< BACK'
+          color='white'
+          style={{fontWeight: 'bold'}}
+        />
+      </View>
       <ScrollView>
         {Data[postIdx].comments.map((comment, i) => {
           return (
@@ -39,4 +49,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
   },
+  buttonView: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width:'100%',
+    backgroundColor: 'rgba(000,000,000, 0.5)',
+    fontWeight: 'bold'
+  }
 });
