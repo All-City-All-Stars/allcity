@@ -10,17 +10,17 @@ import {
 import Data from "../data/seed_data";
 import { CommentCard } from "../components/Comment";
 
-export default function CommentFeed() {
+export default function CommentFeed({ idx }) {
   return (
     <SafeAreaView>
       <ScrollView>
-        {Data.map((post, idx) => {
+        {Data.map((post, index) => {
           return (
             <>
               {post.comments.map((comment, i) => {
                 return (
                   <CommentCard key={i}>
-                    <Text>{comment}</Text>
+                    <Text>{comment[idx]}</Text>
                   </CommentCard>
                 );
               })}
