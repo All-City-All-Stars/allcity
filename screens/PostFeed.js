@@ -12,16 +12,18 @@ export default function PostFeed(props) {
     const fillCrown = require('../assets/crownfill.png');
     const emptyCrown = require('../assets/crown.png');
     let crownState = true;
-        
+
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView>
                 {
                     Data.map((post, idx) => {
+
                         const [crown, setCrown] = useState(crownState);
                         const onPress = () => {
                             setCrown(!crown);
                         };
+
                         return (
                             <SafeAreaView key={idx}>
                                 <Card>
