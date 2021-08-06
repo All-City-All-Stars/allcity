@@ -12,19 +12,15 @@ export default function PostFeed(props) {
     const fillCrown = require('../assets/crownfill.png');
     const emptyCrown = require('../assets/crown.png');
     let crownState = true;
-    const [crown, setCrown] = useState(crownState);
-    console.log(crownState);
-    console.log(!crownState);
-    // const [pressCount, setPressCount] = useState(0);
-    
+        
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView>
                 {
                     Data.map((post, idx) => {
-                        const onPress = (idx) => {
+                        const [crown, setCrown] = useState(crownState);
+                        const onPress = () => {
                             setCrown(!crown);
-                            // console.log(idx); 
                         };
                         return (
                             <SafeAreaView key={idx}>
@@ -38,7 +34,7 @@ export default function PostFeed(props) {
                                        
                                     <View style={styles.iconcontainer}>
                                         <Pressable
-                                            onPress={onPress, idx}>
+                                            onPress={onPress}>
                                             <Image 
                                                 key={idx}
                                                 style={styles.icons} 
