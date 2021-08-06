@@ -6,36 +6,49 @@ import {
   SafeAreaView,
   ScrollView,
   StyleSheet,
+  Button,
 } from "react-native";
 import InputWithLabel from "../components/InputWithLabel";
+import Data from "../data/seed_data";
 
 export default function NewPostForm() {
-  function onSubmit(values) {
-    if (values.password !== values.confirmation_password) {
-      alert("Passwords do not match. Please try again");
-    } else {
-      alert(
-        "🤩🤩🤩🤩  ALL CITY ALL STARS FOR LIFE 🤩🤩🤩🤩"
-      );
-    }
-  }
+  // function onSubmit(values) {
+  //   if (values) {
+  //     alert(} else {
+  //     alert(
 
+  //     );
+  //   }
+  // }
+
+  // function confirmPassword(values) {
+  //   if (values.password !== values.confirmation_password) {
+  //     alert("Passwords do not match. Please try again");
+  //   } else {
+  //     alert(
+  //       "🤩🤩🤩🤩  ALL CITY ALL STARS FOR LIFE 🤩🤩🤩🤩"
+  //     );
+  //   }
+  // }
   return (
     <Formik
       initialValues={{
-        email: "",
-        password: "",
-        confirmation_password: "",
+        // email: "",
+        // password: "",
+        // confirmation_password: "",
         image_url: "",
         author: "",
         location: "",
         caption_body: "",
       }}
-      onSubmit={onSubmit}
+      onSubmit={(values) => {
+        Data.push(values);
+        console.log(Data);
+      }}
     >
       {({ handleChange, handleSubmit, values }) => (
         <ScrollView style={styles.style}>
-          <InputWithLabel
+          {/* <InputWithLabel
             label="Email"
             placeholder="Type your email here"
             onChangeText={handleChange("email")}
@@ -56,15 +69,13 @@ export default function NewPostForm() {
             )}
             value={values.confirmation_password}
             secureTextEntry
-            onSubmitEditing={handleSubmit}
-          />
+            onSubmitEditing={confirmPassword}
+          /> */}
           <InputWithLabel
             label="Image URL"
             placeholder="enter the image_url here"
             value={values.image_url}
-            onChangeText={handleChange(
-              "confirmation_password"
-            )}
+            onChangeText={handleChange("image_url")}
           />
           <InputWithLabel
             label="Author"
@@ -90,6 +101,7 @@ export default function NewPostForm() {
             value={values.caption_body}
             onChangeText={handleChange("caption_body")}
           />
+          <Button onPress={handleSubmit} title="Submit" />
         </ScrollView>
       )}
     </Formik>
@@ -98,6 +110,7 @@ export default function NewPostForm() {
 
 const styles = StyleSheet.create({
   style: {
+    marginBottom: 100,
     flex: 1,
     backgroundColor: "#46c8e8",
   },
