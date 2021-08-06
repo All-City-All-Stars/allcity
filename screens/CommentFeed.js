@@ -20,7 +20,7 @@ export default function CommentFeed({ idx }) {
               {post.comments.map((comment, i) => {
                 return (
                   <CommentCard key={i}>
-                    <Text>{comment[idx]}</Text>
+                    <Text>{comment.idx}</Text>
                   </CommentCard>
                 );
               })}

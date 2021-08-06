@@ -43,9 +43,6 @@ export default function App() {
             backgroundColor: "gold",
           },
           tabBarHideOnKeyboard: "true",
-          // tabBarIcon: ({ focused, color, size }) => {
-
-          // }
         }}
       >
         {/* <Tab.Screen name="Comment" component={Comment} /> */}
