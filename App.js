@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import Nav from "./navigation/Navigator";
 import Header from "./components/Header";
 import NewPostForm from "./screens/NewPostForm";
 import PostFeed from "./screens/PostFeed";
