@@ -12,12 +12,19 @@ export default function PostFeed(props) {
     const fillCrown = require('../assets/crownfill.png');
     const emptyCrown = require('../assets/crown.png');
     const [crown, setCrown] = useState(emptyCrown);
-    const [pressCount, setPressCount] = useState();
+    // const [pressCount, setPressCount] = useState(0);
     const onPress = () => {
-        // setPressCount(pressCount += 1);
+        // setPressCount(pressCount++);
         // console.log(pressCount);
-        emptyCrown ? setCrown(fillCrown) : setCrown(emptyCrown);
-    }
+        // emptyCrown ? setCrown(fillCrown) : setCrown(emptyCrown);
+        // console.log(idx);
+        if (emptyCrown) {
+            setCrown(fillCrown);
+        } else if (fillCrown) {
+            setCrown(emptyCrown);
+        }
+     
+    };
 
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
@@ -38,6 +45,7 @@ export default function PostFeed(props) {
                                         <Pressable
                                             onPress={onPress}>
                                             <Image 
+                                                key={idx}
                                                 style={styles.icons} 
                                                 source={crown} />
                                         </Pressable>
