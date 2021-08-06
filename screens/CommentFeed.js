@@ -18,7 +18,9 @@ export default function CommentFeed({ route }) {
               {Data[postIdx].comments.map((comment, i) => {
                 return (
                   <CommentCard key={i}>
+
                     <Text>{comment}</Text>
+
                   </CommentCard>
                 );
               })}

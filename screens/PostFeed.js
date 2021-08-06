@@ -1,13 +1,17 @@
-import React from 'react';
-import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaView, TouchableOpacity, Pressable } from 'react-native';
 import { Body, Card, CardFooter, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
+
 
 import {useNavigation} from '@react-navigation/native'
 
 export default function PostFeed(props) {
 
-    const navigation = useNavigation()
+    const navigation = useNavigation();
+    const fillCrown = require('../assets/crownfill.png');
+    const emptyCrown = require('../assets/crown.png');
+    const [crown, setCrown] = useState(emptyCrown);
 
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
@@ -25,7 +29,16 @@ export default function PostFeed(props) {
                                     </CardFooter>
                                        
                                     <View style={styles.iconcontainer}>
-                                        <Image style={styles.icons} source={require('../assets/crown.png')} />
+                                        <Pressable
+                                            onPress={() => 
+                                                emptyCrown ? setCrown(fillCrown) 
+                                                : setCrown(emptyCrown) 
+                                                }>
+                                            <Image 
+                                                style={styles.icons} 
+                                                source={crown} />
+                                        </Pressable>
+
                                         <TouchableOpacity 
                                             key={idx} 
                                             onPress={() => {navigation.navigate('Comments', {postIdx: idx})}} >
