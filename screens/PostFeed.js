@@ -12,6 +12,12 @@ export default function PostFeed(props) {
     const fillCrown = require('../assets/crownfill.png');
     const emptyCrown = require('../assets/crown.png');
     const [crown, setCrown] = useState(emptyCrown);
+    const [pressCount, setPressCount] = useState();
+    const onPress = () => {
+        // setPressCount(pressCount += 1);
+        // console.log(pressCount);
+        emptyCrown ? setCrown(fillCrown) : setCrown(emptyCrown);
+    }
 
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
@@ -30,10 +36,7 @@ export default function PostFeed(props) {
                                        
                                     <View style={styles.iconcontainer}>
                                         <Pressable
-                                            onPress={() => 
-                                                emptyCrown ? setCrown(fillCrown) 
-                                                : setCrown(emptyCrown) 
-                                                }>
+                                            onPress={onPress}>
                                             <Image 
                                                 style={styles.icons} 
                                                 source={crown} />
