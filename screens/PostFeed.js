@@ -13,8 +13,6 @@ export default function PostFeed(props) {
     const emptyCrown = require('../assets/crown.png');
     let crownState = true;
     const [crown, setCrown] = useState(crownState);
-    console.log(crownState);
-    console.log(!crownState);
     // const [pressCount, setPressCount] = useState(0);
     
     return (
@@ -22,10 +20,10 @@ export default function PostFeed(props) {
             <ScrollView>
                 {
                     Data.map((post, idx) => {
-                        const onPress = (idx) => {
-                            setCrown(!crown);
-                            // console.log(idx); 
-                        };
+                       const [crown, setCrown] = useState(crownState);
+                       const onPress = () => {
+                           setCrown(!crown);
+                       }
                         return (
                             <SafeAreaView key={idx}>
                                 <Card>
@@ -38,7 +36,7 @@ export default function PostFeed(props) {
                                        
                                     <View style={styles.iconcontainer}>
                                         <Pressable
-                                            onPress={onPress, idx}>
+                                            onPress={onPress}>
                                             <Image 
                                                 key={idx}
                                                 style={styles.icons} 
