@@ -11,13 +11,21 @@ export default function PostFeed(props) {
     const navigation = useNavigation();
     const fillCrown = require('../assets/crownfill.png');
     const emptyCrown = require('../assets/crown.png');
-    const [crown, setCrown] = useState(emptyCrown);
-
+    let crownState = true;
+    const [crown, setCrown] = useState(crownState);
+    console.log(crownState);
+    console.log(!crownState);
+    // const [pressCount, setPressCount] = useState(0);
+    
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView>
                 {
                     Data.map((post, idx) => {
+                        const onPress = (idx) => {
+                            setCrown(!crown);
+                            // console.log(idx); 
+                        };
                         return (
                             <SafeAreaView key={idx}>
                                 <Card>
@@ -30,13 +38,11 @@ export default function PostFeed(props) {
                                        
                                     <View style={styles.iconcontainer}>
                                         <Pressable
-                                            onPress={() => 
-                                                emptyCrown ? setCrown(fillCrown) 
-                                                : setCrown(emptyCrown) 
-                                                }>
+                                            onPress={onPress, idx}>
                                             <Image 
+                                                key={idx}
                                                 style={styles.icons} 
-                                                source={crown} />
+                                                source={crown ? emptyCrown : fillCrown} />
                                         </Pressable>
 
                                         <TouchableOpacity 
