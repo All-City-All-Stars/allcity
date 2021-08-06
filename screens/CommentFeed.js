@@ -3,29 +3,30 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  SafeAreaView,
+  ImageBackground,
 } from "react-native";
 import Data from "../data/seed_data";
 import { CommentCard } from "../components/Comment";
 
 export default function CommentFeed({ route }) {
-
   const { postIdx } = route.params;
 
   return (
-    <SafeAreaView>
+    <ImageBackground
+      source={require("../assets/bricks.png")}
+      style={styles.image}
+    >
       <ScrollView>
-              {Data[postIdx].comments.map((comment, i) => {
-                return (
-                  <CommentCard key={i}>
-
-                    <Text>{comment}</Text>
-
-                  </CommentCard>
-                );
-              })}
+        {Data[postIdx].comments.map((comment, i) => {
+          return (
+            <CommentCard key={i}>
+              <Text style={{ fontWeight: "bold" }}>User: </Text>
+              <Text>{comment}</Text>
+            </CommentCard>
+          );
+        })}
       </ScrollView>
-    </SafeAreaView>
+    </ImageBackground>
   );
 }
 
@@ -33,5 +34,9 @@ const styles = StyleSheet.create({
   comment: {
     fontSize: 16,
     flexDirection: "column",
+  },
+  image: {
+    flex: 1,
+    justifyContent: "flex-start",
   },
 });
