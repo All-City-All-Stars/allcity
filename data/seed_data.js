@@ -109,7 +109,7 @@ const Data = [
             "location": "Unknown",
             "post_time": "4/21/2021",
             "caption_body": "Risto is for the kids.  Absolute fire!",
-            "comments": [],
+            "comments": ["Damn RISTO!", "Someone put this man in a MUSEUM!"],
         },
         {
             "image_url": "https://i.imgur.com/iAimTOr.jpg",
@@ -117,7 +117,7 @@ const Data = [
             "location": "Los Angeles, CA",
             "post_time": "2/14/2021",
             "caption_body": "Ladie straight dropped the mic with this wall. The 3D work and the color combo make you beg for more.",
-            "comments": [],
+            "comments": ["Girl POWER!", "HOT HOT HOT", "Love this!"],
         },
         {
             "image_url": "https://i.imgur.com/yWguUnA.jpg",
@@ -141,7 +141,7 @@ const Data = [
             "location": "Berlin, Germany",
             "post_time": "3/7/2021",
             "caption_body": "1UP CREW, Staying up as always. Euro monsters with this extinguisher piece.  Love the drips!",
-            "comments": [],
+            "comments": ["The best in Europe!", "1Up, cant stop, wont stop!", "I need an extinguisher!"],
         },
         {
             "image_url": "https://i.imgur.com/7VZotze.jpg",
@@ -149,7 +149,7 @@ const Data = [
             "location": "Salt Lake City, UT",
             "post_time": "1/10/2021",
             "caption_body": "AMBOE whole car.  Nearly fell down when I saw it. Polka dots fam, Polka dots. Killer.",
-            "comments": [],
+            "comments": ["Always love a whole car!", "King Status!", "Give Amboe the crown already", "Yay Area!"],
         },
         {
             "image_url": "https://i.imgur.com/ovgPEGB.jpg",
@@ -157,7 +157,7 @@ const Data = [
             "location": "Denver, CO",
             "post_time": "3/20/2021",
             "caption_body": "Atomik stays with the fire.  How the snow hasn't melted is beyond me.",
-            "comments": [],
+            "comments": ["ATOMIK my mans!", "Killin it!"],
         }
     ]
 
