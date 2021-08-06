@@ -5,13 +5,6 @@ import Data from '../data/seed_data';
 
 import {useNavigation} from '@react-navigation/native'
 
-const onPress = () => {
-console.log('====================================');
-console.log();
-console.log('====================================');
-}
-
-
 export default function PostFeed(props) {
 
     const navigation = useNavigation()
@@ -35,7 +28,7 @@ export default function PostFeed(props) {
                                         <Image style={styles.icons} source={require('../assets/crown.png')} />
                                         <TouchableOpacity 
                                             key={idx} 
-                                            onPress={() => {navigation.navigate('Comments')}} >
+                                            onPress={() => {navigation.navigate('Comments', {postIdx: idx})}} >
                                                 <Image style={styles.icons} source={require('../assets/roller.png')} />
                                         </TouchableOpacity>
                                     </View>
