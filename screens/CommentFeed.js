@@ -10,23 +10,26 @@ import {
 import Data from "../data/seed_data";
 import { CommentCard } from "../components/Comment";
 
-export default function CommentFeed({ idx }) {
+export default function CommentFeed({ route }) {
+
+  const { postIdx } = route.params;
+
   return (
     <SafeAreaView>
       <ScrollView>
-        {Data.map((post, index) => {
+        {/* {Data.map((post, index) => {
           return (
-            <>
-              {post.comments.map((comment, i) => {
+            <> */}
+              {Data[postIdx].comments.map((comment, i) => {
                 return (
                   <CommentCard key={i}>
-                    <Text>{comment[idx]}</Text>
+                    <Text>{comment}</Text>
                   </CommentCard>
                 );
               })}
-            </>
+            {/* </>
           );
-        })}
+        })} */}
       </ScrollView>
     </SafeAreaView>
   );
