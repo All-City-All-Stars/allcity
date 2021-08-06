@@ -34,7 +34,7 @@ export default function NewPostForm() {
       onSubmit={onSubmit}
     >
       {({ handleChange, handleSubmit, values }) => (
-        <ScrollView>
+        <ScrollView style={styles.style}>
           <InputWithLabel
             label="Email"
             placeholder="Type your email here"
@@ -99,7 +99,6 @@ export default function NewPostForm() {
 const styles = StyleSheet.create({
   style: {
     flex: 1,
-    justifyContent: "center",
-    backgroundColor: "#ecf0f1",
+    backgroundColor: "#46c8e8",
   },
 });
