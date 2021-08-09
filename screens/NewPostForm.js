@@ -23,10 +23,13 @@ export default function NewPostForm() {
       }}
     >
       {({ handleChange, handleSubmit, values }) => (
-        <ScrollView style={styles.style}>
+        <ScrollView 
+          style={styles.style}
+          accessible={true}
+          accessibilityLabel={'Form to create a new post'}>
           <InputWithLabel
             label="Image URL"
-            placeholder="enter the image_url here"
+            placeholder="enter the image url here"
             value={values.image_url}
             onChangeText={handleChange("image_url")}
           />
@@ -48,7 +51,7 @@ export default function NewPostForm() {
             value={values.caption_body}
             onChangeText={handleChange("caption_body")}
           />
-          <Button onPress={handleSubmit} title="Submit" />
+          <Button onPress={handleSubmit} title="Submit" accessibilityLabel={'Double tap to submit your post'} />
         </ScrollView>
       )}
     </Formik>
