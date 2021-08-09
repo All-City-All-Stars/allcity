@@ -7,7 +7,7 @@
     "orientation": "portrait",
     "icon": "./assets/AllCityLogo.png",
     "splash": {
-      "image": "./assets/AllCityLogo.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
