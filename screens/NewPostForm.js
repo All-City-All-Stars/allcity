@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 import {
-  View,
-  Text,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Button,
