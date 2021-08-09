@@ -23,7 +23,7 @@ export default function CommentFeed({ route, navigation }) {
           onPress={() => navigation.goBack()}
           title='< BACK'
           color='white'
-          style={{fontWeight: 'bold'}}
+          style={{ fontWeight: 'bold' }}
         />
       </View>
       <ScrollView>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   buttonView: {
     flexDirection: 'row',
     justifyContent: 'center',
-    width:'100%',
+    width: '100%',
     backgroundColor: 'rgba(000,000,000, 0.5)',
     fontWeight: 'bold'
   }
