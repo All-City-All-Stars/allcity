@@ -3,7 +3,6 @@ import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaVie
 import { Body, Card, CardFooter, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
 
-
 import {useNavigation} from '@react-navigation/native'
 
 export default function PostFeed(props) {

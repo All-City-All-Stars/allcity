@@ -12,30 +12,9 @@ import InputWithLabel from "../components/InputWithLabel";
 import Data from "../data/seed_data";
 
 export default function NewPostForm() {
-  // function onSubmit(values) {
-  //   if (values) {
-  //     alert(} else {
-  //     alert(
-
-  //     );
-  //   }
-  // }
-
-  // function confirmPassword(values) {
-  //   if (values.password !== values.confirmation_password) {
-  //     alert("Passwords do not match. Please try again");
-  //   } else {
-  //     alert(
-  //       "🤩🤩🤩🤩  ALL CITY ALL STARS FOR LIFE 🤩🤩🤩🤩"
-  //     );
-  //   }
-  // }
   return (
     <Formik
       initialValues={{
-        // email: "",
-        // password: "",
-        // confirmation_password: "",
         image_url: "",
         author: "",
         location: "",
@@ -48,29 +27,6 @@ export default function NewPostForm() {
     >
       {({ handleChange, handleSubmit, values }) => (
         <ScrollView style={styles.style}>
-          {/* <InputWithLabel
-            label="Email"
-            placeholder="Type your email here"
-            onChangeText={handleChange("email")}
-            value={values.email}
-          />
-          <InputWithLabel
-            label="Password"
-            placeholder="Type your password here"
-            onChangeText={handleChange("password")}
-            value={values.password}
-            secureTextEntry
-          />
-          <InputWithLabel
-            label="Confirm Password"
-            placeholder="Confirm your password here"
-            onChangeText={handleChange(
-              "confirmation_password"
-            )}
-            value={values.confirmation_password}
-            secureTextEntry
-            onSubmitEditing={confirmPassword}
-          /> */}
           <InputWithLabel
             label="Image URL"
             placeholder="enter the image_url here"
@@ -89,12 +45,6 @@ export default function NewPostForm() {
             value={values.location}
             onChangeText={handleChange("location")}
           />
-          {/* <InputWithLabel
-            label="Post Time"
-            placeholder="enter your post_time here"
-            value={post_time}
-            onChangeText={setPostTime}
-          /> */}
           <InputWithLabel
             label="Caption Body"
             placeholder="write your caption here"

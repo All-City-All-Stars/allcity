@@ -45,7 +45,6 @@ export default function App() {
           tabBarHideOnKeyboard: "true",
         }}
       >
-        {/* <Tab.Screen name="Comment" component={Comment} /> */}
         <Tab.Screen
           name="Home"
           component={Home}
@@ -70,24 +69,11 @@ export default function App() {
             )
           }}}
         />
-        {/* <Tab.Screen 
-                name='Profile' 
-                component={Profile} /> */}
       </Tab.Navigator>
     </NavigationContainer>
     </>
   );
 }
-
-// export default function App() {
-//   return (
-//     <>
-//       <Header />
-//       {/* <NewPostForm /> */}
-//       <Nav />
-//     </>
-//   );
-// }
 
 const styles = StyleSheet.create({
   container: {
