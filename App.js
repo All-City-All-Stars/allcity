@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Image } from "react-native";
 import Header from "./components/Header";
 import NewPostForm from "./screens/NewPostForm";
 import PostFeed from "./screens/PostFeed";
@@ -25,6 +24,7 @@ function Home() {
 }
 
 export default function App() {
+
   return (
     <>
     <Header/>
@@ -81,5 +81,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  thumbnail: {
+    width: 300,
+    height: 300,
+    resizeMode: 'contain'
   },
 });

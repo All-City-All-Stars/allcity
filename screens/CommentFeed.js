@@ -18,7 +18,7 @@ export default function CommentFeed({ route, navigation }) {
       source={require("../assets/bricks.png")}
       style={styles.image}
     >
-      <View style={styles.buttonView}>
+      <View style={styles.buttonView} accessible={true} accessibilityLabel={'Tap to go back'}>
         <Button
           onPress={() => navigation.goBack()}
           title='< BACK'
