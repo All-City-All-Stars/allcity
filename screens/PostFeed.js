@@ -3,7 +3,7 @@ import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaVie
 import { Body, Card, CardFooter, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
 
-import { useNavigation } from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native'
 
 export default function PostFeed(props) {
 
@@ -32,20 +32,20 @@ export default function PostFeed(props) {
                                         <User children={post.author} />
                                         <Body children={post.caption_body} />
                                     </CardFooter>
-
+                                       
                                     <View style={styles.iconcontainer}>
                                         <Pressable
                                             onPress={onPress}>
-                                            <Image
+                                            <Image 
                                                 key={idx}
-                                                style={styles.icons}
+                                                style={styles.icons} 
                                                 source={crown ? emptyCrown : fillCrown} />
                                         </Pressable>
 
-                                        <TouchableOpacity
-                                            key={idx}
-                                            onPress={() => { navigation.navigate('Comments', { postIdx: idx }) }} >
-                                            <Image style={styles.icons} source={require('../assets/roller.png')} />
+                                        <TouchableOpacity 
+                                            key={idx} 
+                                            onPress={() => {navigation.navigate('Comments', {postIdx: idx})}} >
+                                                <Image style={styles.icons} source={require('../assets/roller.png')} />
                                         </TouchableOpacity>
                                     </View>
                                 </Card>
