@@ -35,6 +35,8 @@ export default function PostFeed(props) {
                                        
                                     <View style={styles.iconcontainer}>
                                         <Pressable
+                                            accessible={true}
+                                            accessibilityLabel={'Double tap to like this post'}
                                             onPress={onPress}>
                                             <Image 
                                                 key={idx}
@@ -42,7 +44,9 @@ export default function PostFeed(props) {
                                                 source={crown ? emptyCrown : fillCrown} />
                                         </Pressable>
 
-                                        <TouchableOpacity 
+                                        <TouchableOpacity
+                                            accessible={true}
+                                            accessibilityLabel={'Double tap to view the comments screen'} 
                                             key={idx} 
                                             onPress={() => {navigation.navigate('Comments', {postIdx: idx})}} >
                                                 <Image style={styles.icons} source={require('../assets/roller.png')} />
