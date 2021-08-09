@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Image } from "react-native";
 import Header from "./components/Header";
 import NewPostForm from "./screens/NewPostForm";
 import PostFeed from "./screens/PostFeed";
@@ -24,52 +24,57 @@ function Home() {
 }
 
 export default function App() {
+
   return (
     <>
-    <Header/>
-    <NavigationContainer
-      initialRouteName="Feed"
-      styles={styles.navContainer}
-    >
-      <Tab.Navigator
-        screenOptions={{
-          tabBarActiveTintColor: "darkviolet",
-          tabBarInactiveTintColor: "cadetblue",
-          headerShown: false,
-          tabBarStyle: {
-            height: 100,
-            position: "absolute",
-            backgroundColor: "gold",
-          },
-          tabBarHideOnKeyboard: "true",
-        }}
+      <Header />
+      <NavigationContainer
+        initialRouteName="Feed"
+        styles={styles.navContainer}
       >
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{tabBarIcon: ({ focused, color, size }) => {
-            return (
-                <Image 
-                    style={{width:40, height: 40,}}
-                    source ={require('./assets/feed.png')}
-                />
-            )
-          }}}
+        <Tab.Navigator
+          screenOptions={{
+            tabBarActiveTintColor: "darkviolet",
+            tabBarInactiveTintColor: "cadetblue",
+            headerShown: false,
+            tabBarStyle: {
+              height: 100,
+              position: "absolute",
+              backgroundColor: "gold",
+            },
+            tabBarHideOnKeyboard: "true",
+          }}
+        >
+          <Tab.Screen
+            name="Home"
+            component={Home}
+            options={{
+              tabBarIcon: ({ focused, color, size }) => {
+                return (
+                  <Image
+                    style={{ width: 40, height: 40, }}
+                    source={require('./assets/feed.png')}
+                  />
+                )
+              }
+            }}
           />
-        <Tab.Screen
-          name="Add Post"
-          component={NewPostForm}
-          options={{tabBarIcon: ({ focused, color, size }) => {
-            return (
-                <Image 
-                    style={{width:40, height: 40,}}
-                    source ={require('./assets/spraycan.png')}
-                />
-            )
-          }}}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+          <Tab.Screen
+            name="Add Post"
+            component={NewPostForm}
+            options={{
+              tabBarIcon: ({ focused, color, size }) => {
+                return (
+                  <Image
+                    style={{ width: 40, height: 40, }}
+                    source={require('./assets/spraycan.png')}
+                  />
+                )
+              }
+            }}
+          />
+        </Tab.Navigator>
+      </NavigationContainer>
     </>
   );
 }
@@ -77,8 +82,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  thumbnail: {
+    width: 300,
+    height: 300,
+    resizeMode: 'contain'
   },
 });
