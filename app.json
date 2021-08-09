@@ -27,7 +27,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/AllCityLogo.png"
+      "favicon": "./assets/favicon.png"
     },
     "description": "",
     "githubUrl": "https://github.com/All-City-All-Stars/allcity"
