@@ -51,12 +51,6 @@ export default function NewPostForm() {
             value={values.caption_body}
             onChangeText={handleChange("caption_body")}
           />
-          <Button
-            icon="add-a-photo" mode="contained" style={styles.button}
-            onPress={() => {_pickImage(handleChange('image'))}}
-              >Pick an image from camera roll</Button>
-              {values.image && values.image.length > 0 ?
-                <Image source={{ uri: values.image }} style={{ width: 200, height: 200 }} /> : null}
           <Button onPress={handleSubmit} title="Submit" />
         </ScrollView>
       )}
