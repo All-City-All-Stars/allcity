@@ -85,10 +85,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-<<<<<<< HEAD
 });
-
-//Merge Problems//
-=======
-});
->>>>>>> fix master
