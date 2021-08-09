@@ -2,11 +2,12 @@
   "expo": {
     "name": "allcity",
     "slug": "allcity",
+    "privacy": "public",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/AllCityLogo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/AllCityLogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/AllCityLogo.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/AllCityLogo.png"
     },
     "description": "",
     "githubUrl": "https://github.com/All-City-All-Stars/allcity"
