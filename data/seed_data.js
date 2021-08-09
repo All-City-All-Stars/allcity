@@ -21,7 +21,7 @@ const Data = [
             "location": "Colorado Springs, CO",
             "post_time": "1/20/2021",
             "caption_body": "Custom Art Can by Yeti, can't go wrong with that color scheme.  Straight fire.",
-            "comments": [],
+            "comments": ["AYEEE! How much!?!?", "So dope... I need this."],
         },
         {
             "image_url": "https://i.imgur.com/agVBIwb.jpg",
@@ -29,7 +29,7 @@ const Data = [
             "location": "Unknown",
             "post_time": "3/3/2021",
             "caption_body": "Siek Box Truck out in the wild, loving the purple on this piece.  Dude has style for days.",
-            "comments": [],
+            "comments": ["Box trucks for life.", "Killer!"],
         },
         {
             "image_url": "https://i.imgur.com/zRIU8XD.jpg",
@@ -37,7 +37,7 @@ const Data = [
             "location": "Colorado Springs, CO",
             "post_time": "4/20/2021",
             "caption_body": "Fresh postal sticker from Yeti, he's got the bomb!",
-            "comments": [],
+            "comments": ["Want to trade stickers? I need this in my blackbook!", "Dope, love the TNT!"],
         },
         {
             "image_url": "https://i.imgur.com/ebWTHqn.jpg",
@@ -45,7 +45,7 @@ const Data = [
             "location": "Raleigh, NC",
             "post_time": "4/2/2021",
             "caption_body": "Nothing like going benching and catching this SWEET Sug piece. So Fresh. So Clean.",
-            "comments": [],
+            "comments": ["SUG 4 LIFE!", "He killed this one."],
         },
         {
             "image_url": "https://i.imgur.com/YjUwhZi.jpg",
@@ -53,7 +53,7 @@ const Data = [
             "location": "Unknown",
             "post_time": "5/13/2021",
             "caption_body": "Rust is killin the game with these abstract jammers.  Colors, Crazy, everything on point!",
-            "comments": [],
+            "comments": ["RUST 4 President!", "Rust, coming correct. Check yourself before you wreck yourself TOYS!"],
         },
         {
             "image_url": "https://i.imgur.com/tBa45Xo.jpg",
@@ -61,7 +61,7 @@ const Data = [
             "location": "Unknown",
             "post_time": "5/3/2021",
             "caption_body": "Fresh Ronie wall, can't get over this color scheme. Thinking I should print this out and frame it lol.",
-            "comments": [],
+            "comments": ["Oh dang... this dude is no slouch.", "Keepin it 100 I see!"],
         },
         {
             "image_url": "https://i.imgur.com/CxfEz5C.jpg",
@@ -69,7 +69,7 @@ const Data = [
             "location": "Amarillo, TX",
             "post_time": "6/6/2021",
             "caption_body": "Taste freight pieces are ALWAYS dope and this one is practically on fire.  Those colors practically smack you in the face. Great flow.",
-            "comments": [],
+            "comments": ["Taste stayin LOUD AF!", "BRUH!", "I WISH I could paint like this."],
         },
         {
             "image_url": "https://i.imgur.com/PaUkuyG.jpg",
@@ -77,7 +77,7 @@ const Data = [
             "location": "Brooklyn, NY",
             "post_time": "2/9/2021",
             "caption_body": "Seen, the absolute legend, out in the wild.  You love to see it.",
-            "comments": [],
+            "comments": ["OG LEGEND ALERT", "NYC BABY!", "SEEN stays up!", "Hell yeah fam!"],
         },
         {
             "image_url": "https://i.imgur.com/fjjzZQ2.png",
@@ -85,7 +85,7 @@ const Data = [
             "location": "Los Angeles, CA",
             "post_time": "9/10/2021",
             "caption_body": "Not only does this Aguas piece pop, you also gotta give it to the mad man for reaching this heaven spot. WOW!",
-            "comments": [],
+            "comments": ["Bruh chillin with the angels in this spot!", "Aint no way Im getting that high", "Balls of steel."],
         },
         {
             "image_url": "https://i.imgur.com/WBoZiXn.jpg",
@@ -93,7 +93,7 @@ const Data = [
             "location": "Unknown",
             "post_time": "5/5/2021",
             "caption_body": "Odieth, one of the MASTERS of perspective, with yet another mind bender.",
-            "comments": [],
+            "comments": ["Mind = BLOWN", "We are not worthy!", "Wait.... thats not a real bus?"],
         },
         {
             "image_url": "https://i.imgur.com/aSZcQjE.jpg",
@@ -109,7 +109,7 @@ const Data = [
             "location": "Unknown",
             "post_time": "4/21/2021",
             "caption_body": "Risto is for the kids.  Absolute fire!",
-            "comments": [],
+            "comments": ["Damn RISTO!", "Someone put this man in a MUSEUM!"],
         },
         {
             "image_url": "https://i.imgur.com/iAimTOr.jpg",
@@ -117,7 +117,7 @@ const Data = [
             "location": "Los Angeles, CA",
             "post_time": "2/14/2021",
             "caption_body": "Ladie straight dropped the mic with this wall. The 3D work and the color combo make you beg for more.",
-            "comments": [],
+            "comments": ["Girl POWER!", "HOT HOT HOT", "Love this!"],
         },
         {
             "image_url": "https://i.imgur.com/yWguUnA.jpg",
@@ -141,7 +141,7 @@ const Data = [
             "location": "Berlin, Germany",
             "post_time": "3/7/2021",
             "caption_body": "1UP CREW, Staying up as always. Euro monsters with this extinguisher piece.  Love the drips!",
-            "comments": [],
+            "comments": ["The best in Europe!", "1Up, cant stop, wont stop!", "I need an extinguisher!"],
         },
         {
             "image_url": "https://i.imgur.com/7VZotze.jpg",
@@ -149,7 +149,7 @@ const Data = [
             "location": "Salt Lake City, UT",
             "post_time": "1/10/2021",
             "caption_body": "AMBOE whole car.  Nearly fell down when I saw it. Polka dots fam, Polka dots. Killer.",
-            "comments": [],
+            "comments": ["Always love a whole car!", "King Status!", "Give Amboe the crown already", "Yay Area!"],
         },
         {
             "image_url": "https://i.imgur.com/ovgPEGB.jpg",
@@ -157,7 +157,7 @@ const Data = [
             "location": "Denver, CO",
             "post_time": "3/20/2021",
             "caption_body": "Atomik stays with the fire.  How the snow hasn't melted is beyond me.",
-            "comments": [],
+            "comments": ["ATOMIK my mans!", "Killin it!"],
         }
     ]
 

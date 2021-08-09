@@ -1,10 +1,5 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, } from 'react-native';
-import Colors from '../data/Colors.js'
-    
-const randomColor = {
-        shadowColor: Colors[Math.floor(Math.random() * Colors.length)]
-    }
 
 export function CardHeader(props) {
     return (
@@ -42,7 +37,7 @@ export function Body(props) {
 
 export function Card(props) {
     return (
-        <View style={[styles.card, randomColor]}>
+        <View style={styles.card}>
             {props.children}
         </View>
     );
@@ -53,6 +48,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         elevation: 3,
         backgroundColor:'#efefef',
+        shadowColor: '#000',
         shadowOffset: {width: 1, height: 2},
         shadowOpacity: 0.8,
         shadowRadius: 8,
