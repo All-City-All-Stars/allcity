@@ -8,8 +8,7 @@ AllCity is a working, interactive, mobile application that allows users to learn
 
 ## Your tech stack (frontend, backend, database)
 
-React Native, Expo,
-AWS for Images, Express/MongoDB
+React Native, Expo, Django, PostgreSQL
 
 ## User Stories (MVP)
 
