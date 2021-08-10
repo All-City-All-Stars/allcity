@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Image, ImageBackground, StyleSheet, View, ScrollView, SafeAreaView, Pressable, Dimensions, RefreshControl } from 'react-native';
-import {Card, CardImage} from '../components/Card';
 import {useNavigation} from '@react-navigation/native'
-import { black, white } from 'ansi-colors';
 
 export default function PostFeed(props) {
     const wait = (timeout) => {
@@ -20,7 +18,7 @@ export default function PostFeed(props) {
         try {
             const response = await fetch('https://stark-cliffs-29867.herokuapp.com/posts/')
             const data = await response.json()
-            setPosts(data)
+            setPosts(data.reverse());
         } catch (error) {
             console.log('====================================');
             console.log(error);
@@ -46,7 +44,7 @@ export default function PostFeed(props) {
     };
     const gridStyle = {
             padding: 30,
-            flexDirection: 'row-reverse',
+            flexDirection: 'row',
             flexWrap: 'wrap',
             paddingBottom: 100,
             alignContent: 'center',
