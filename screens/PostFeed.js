@@ -1,24 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaView, TouchableOpacity, Pressable } from 'react-native';
 import { Body, Card, CardFooter, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
-
 import {useNavigation} from '@react-navigation/native'
 
 export default function PostFeed(props) {
+
+    const [posts, setPosts] = useState([])
+    const getPosts = async () => {
+        try {
+            const response = await fetch('https://stark-cliffs-29867.herokuapp.com/posts/')
+            const data = await response.json()
+            setPosts(data)
+        } catch (error) {
+            console.log('====================================');
+            console.log(error);
+            console.log('====================================');
+        }
+    }
+
+    useEffect(() => {
+        getPosts()
+        // eslint-disable-next-line
+    }, [])
 
     const navigation = useNavigation();
     const fillCrown = require('../assets/crownfill.png');
     const emptyCrown = require('../assets/crown.png');
     let crownState = true;
-
+    const [crown, setCrown] = useState(crownState);
+    const iconDisplay = crown ? emptyCrown : fillCrown
+    
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView>
                 {
-                    Data.map((post, idx) => {
+                    posts.map((post, idx) => {
 
-                        const [crown, setCrown] = useState(crownState);
                         const onPress = () => {
                             setCrown(!crown);
                         };
@@ -41,7 +59,7 @@ export default function PostFeed(props) {
                                             <Image 
                                                 key={idx}
                                                 style={styles.icons} 
-                                                source={crown ? emptyCrown : fillCrown} />
+                                                source={iconDisplay} />
                                         </Pressable>
 
                                         <TouchableOpacity
