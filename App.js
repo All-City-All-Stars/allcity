@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import NewPostForm from "./screens/NewPostForm";
 import PostFeed from "./screens/PostFeed";
 import CommentFeed from "./screens/CommentFeed";
+import GalleryView from "./screens/GalleryView";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -69,9 +70,25 @@ export default function App() {
                     style={{ width: 40, height: 40, }}
                     source={require('./assets/spraycan.png')}
                   />
+        
                 )
               }
             }}
+          />
+            <Tab.Screen
+              name="Gallery View"
+              component={GalleryView}
+              options={{
+                tabBarIcon: ({ focused, color, size}) => {
+                  return (
+                    <Image
+                      style={{ width: 40, height: 40, }}
+                      source={require('./assets/grid.png')}
+                    />
+                  )
+                }
+              }}
+              
           />
         </Tab.Navigator>
       </NavigationContainer>
