@@ -1,28 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaView, TouchableOpacity, Pressable } from 'react-native';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Image, ImageBackground, StyleSheet, View, Text, ScrollView, SafeAreaView, TouchableOpacity, Pressable, RefreshControl } from 'react-native';
 import { Body, Card, CardFooter, CardImage, User } from '../components/Card'
 import Data from '../data/seed_data';
 import {useNavigation} from '@react-navigation/native'
 
+const wait = (timeout) => {
+    return new Promise(resolve => setTimeout(resolve, timeout));
+  }
+
 export default function PostFeed(props) {
+
+    const [refreshing, setRefreshing] = useState(false);
+    const onRefresh = useCallback(() => {
+        setRefreshing(true);
+        wait(1000).then(() => setRefreshing(false));
+      }, []);
 
     const [posts, setPosts] = useState([])
     const getPosts = async () => {
         try {
             const response = await fetch('https://stark-cliffs-29867.herokuapp.com/posts/')
             const data = await response.json()
-            setPosts(data)
+            setPosts(data.reverse())
         } catch (error) {
-            console.log('====================================');
             console.log(error);
-            console.log('====================================');
         }
     }
 
     useEffect(() => {
         getPosts()
         // eslint-disable-next-line
-    }, [])
+    }, [refreshing])
 
     const navigation = useNavigation();
     const fillCrown = require('../assets/crownfill.png');
@@ -33,7 +41,13 @@ export default function PostFeed(props) {
     
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
-            <ScrollView>
+            <ScrollView 
+                refreshControl={
+            <RefreshControl
+                refreshing={refreshing}
+                onRefresh={onRefresh}
+            />
+        }>
                 {
                     posts.map((post, idx) => {
 
