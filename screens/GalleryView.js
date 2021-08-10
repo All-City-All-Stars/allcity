@@ -1,10 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Image, ImageBackground, StyleSheet, View, ScrollView, SafeAreaView, Pressable, Dimensions } from 'react-native';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Image, ImageBackground, StyleSheet, View, ScrollView, SafeAreaView, Pressable, Dimensions, RefreshControl } from 'react-native';
 import {Card, CardImage} from '../components/Card';
 import {useNavigation} from '@react-navigation/native'
 import { black, white } from 'ansi-colors';
 
 export default function PostFeed(props) {
+    const wait = (timeout) => {
+        return new Promise(resolve => setTimeout(resolve, timeout));
+      }
+    
+    const [refreshing, setRefreshing] = useState(false);
+    const onRefresh = useCallback(() => {
+        setRefreshing(true);
+        wait(1000).then(() => setRefreshing(false));
+        }, []);
 
     const [posts, setPosts] = useState([])
     const getPosts = async () => {
@@ -22,7 +31,7 @@ export default function PostFeed(props) {
     useEffect(() => {
         getPosts()
         // eslint-disable-next-line
-    }, [])
+    }, [refreshing]);
 
     const navigation = useNavigation();
 
@@ -47,6 +56,13 @@ export default function PostFeed(props) {
     return (
         <ImageBackground source={require('../assets/bricks.png')} style={styles.image}>
             <ScrollView
+                refreshControl={
+                    <RefreshControl
+                        refreshing={refreshing}
+                        onRefresh={onRefresh}
+                        tintColor='white'
+                    />
+                }
                 contentContainerStyle={gridStyle} >
                 {
                     posts.map((post, idx) => {
