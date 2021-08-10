@@ -3,14 +3,17 @@ import { Formik } from "formik";
 import {
   ScrollView,
   StyleSheet,
-  Pressable,
   ImageBackground,
   Text,
+  TouchableHighlight,
 } from "react-native";
 import InputWithLabel from "../components/InputWithLabel";
 import Data from "../data/seed_data";
 
-export default function NewPostForm() {
+export default function NewPostForm({navigation}) {
+
+  const [success, setSuccess] = useState(false);
+
   return (
     <ImageBackground
       source={require('../assets/bricks.png')}
@@ -23,9 +26,24 @@ export default function NewPostForm() {
           location: "",
           caption_body: "",
         }}
-        onSubmit={(values) => {
-          Data.push(values);
-          console.log(Data);
+        onSubmit={async (values) => {
+          try {
+            const response = await fetch('https://stark-cliffs-29867.herokuapp.com/posts/', {
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            if (response.status===201){
+            setSuccess(true)
+            setTimeout(() => {
+                navigation.navigate('Home')
+            }, 1000)
+        }
+        } catch (error) {
+          console.log(error)
+  }
         }}
       >
         {({ handleChange, handleSubmit, values }) => (
@@ -66,14 +84,15 @@ export default function NewPostForm() {
               value={values.caption_body}
               onChangeText={handleChange("caption_body")}
             />
-            <Pressable 
+            <TouchableHighlight 
               onPress={handleSubmit} 
               title="Submit" 
               accessibilityLabel={'Double tap to submit your post'}
               style={styles.button}
+              underlayColor={'#d1d1d1'}
             >
               <Text style={styles.text}>Submit</Text>
-            </Pressable>
+            </TouchableHighlight>
           </ScrollView>
         )}
       </Formik>
@@ -110,13 +129,18 @@ const styles = StyleSheet.create({
     width: 200,
     height: 60,
     marginTop: 35,
+    shadowOffset: {width: 1, height: 2},
+    shadowOpacity: 0.8,
+    shadowRadius: 8,
+    shadowColor: '#000'
   },
   text: {
     fontWeight: 'bold',
     fontSize: 18,
   },
   contentContainer: {
-    justifyContent: 'center',
+    // flex:1,
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
 });
