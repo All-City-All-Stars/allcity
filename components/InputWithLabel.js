@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 15,
-    padding: 15,
+    // marginBottom: 15,
+    // padding: 15,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
