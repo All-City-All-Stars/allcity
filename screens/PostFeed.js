@@ -46,6 +46,7 @@ export default function PostFeed(props) {
             <RefreshControl
                 refreshing={refreshing}
                 onRefresh={onRefresh}
+                tintColor="white"
             />
         }>
                 {
