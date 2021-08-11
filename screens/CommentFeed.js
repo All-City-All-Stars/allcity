@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import Data from "../data/seed_data";
 import { CommentCard } from "../components/Comment";
+import NewCommentForm from "./NewCommentForm";
 
 export default function CommentFeed({ route, navigation }) {
   const { postIdx } = route.params;
@@ -35,6 +36,7 @@ export default function CommentFeed({ route, navigation }) {
             </CommentCard>
           );
         })}
+        <NewCommentForm />
       </ScrollView>
     </ImageBackground>
   );

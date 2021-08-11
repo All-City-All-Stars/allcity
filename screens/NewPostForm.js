@@ -8,7 +8,6 @@ import {
   TouchableHighlight,
 } from "react-native";
 import InputWithLabel from "../components/InputWithLabel";
-import Data from "../data/seed_data";
 
 export default function NewPostForm({navigation}) {
 

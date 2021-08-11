@@ -15,7 +15,9 @@ const Stack = createStackNavigator();
 function Home() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="PostFeed" component={PostFeed} />
+      <Stack.Screen 
+        name="PostFeed" 
+        component={PostFeed} />
       <Stack.Screen
         name="Comments"
         component={CommentFeed}
