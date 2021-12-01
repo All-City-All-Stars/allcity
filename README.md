@@ -4,7 +4,7 @@
 
 ## Project Description
 
-AllCity is a fully rendered, interactive, full-stack mobile app/social media platform that allows users to learn more about graffiti art, the artists, the location, and the creation date. We prioritized semantic naming conventions, hierarchies and aria-labels to ensure AllCity works well with assistive technologies (ie screen readers).![image](https://user-images.githubusercontent.com/65795477/144277281-2f2049e0-7fa5-4970-b826-657fa3d9697c.png)
+AllCity is a fully rendered, interactive, full-stack mobile app/social media platform that allows users to learn more about graffiti art, the artists, the location, and the creation date. We prioritized semantic naming conventions, hierarchies and aria-labels to ensure AllCity works well with assistive technologies (ie screen readers).
 
 
 ## Your tech stack (frontend, backend, database)
